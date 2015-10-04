@@ -1,0 +1,835 @@
+/* &&&&&&&&&&&&&&&&&&& PAROES GERAIS &&&&&&&&&&&&&&&&&&&&&&&& */
+
+/* Cor de fundo e zerando margem e bordas do corpo da pagina */
+hmtl,body{
+    background-color:#000;
+	margin:0;
+	border:none;
+}
+
+
+
+/* Defindo tamanho, Centralizando o palco, e overflow para se cria uma mascara na area da div */
+#palco{
+	width:1280px;
+	height:720px;
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	top:0;
+	margin:auto;
+	overflow:hidden;
+}
+
+/* Padronizando a repetição de fundo e colocando o eixo 0 no inicio da div palco  */
+div{
+    background-repeat:no-repeat;
+	position:absolute;
+}
+
+/* Fotos de fundo dos cenarios, florestas, etc  */
+.cenario{
+	width:1280px;
+	height:585px;
+	}
+	
+/* Padronizando as DIVS textos da página  */	
+.texto{
+	background-color:rgba(10, 20, 116, 0.9);
+	width:0;
+	height:0;
+	opacity:0;
+	overflow:hidden;
+	padding:5px 15px 15px 15px;
+	z-index:10;
+}
+
+/* Padronizando as fontes da página  */
+.texto p{
+	color:#fff;
+	font-family:Segoe, Verdana, sans-serif;
+	font-size:18px;
+}
+
+/* Padronizando as instrucoes para prosseguir a leitura*/
+.clique{
+	color:yellow;
+	line-height:22px;
+}
+
+/* quando o mouse passar encima */
+.aqui:hover{
+	color:white;
+	}
+
+/* Padronizando movimento para os personagens, em todas as cenas  */
+@-webkit-keyframes personagem{
+    0%{-webkit-transform: rotate(-5deg);}
+    100%{-webkit-transform: rotate(5deg);}
+}
+body.cena2 .personagem,
+body.cena3 .personagem,
+body.cena4 .personagem,
+body.cena5 .personagem,
+body.cena6 .personagem,
+body.cena7 .personagem,
+body.cena8 .personagem{
+	-webkit-animation: personagem 3s alternate infinite;
+	}
+
+
+
+/* Animacao Para cena 7 */
+@-webkit-keyframes luta{
+    0%{
+		top:300px;
+		left:1500px;
+		-webkit-transform: scaleX(-1);
+		}
+   100%{
+		top:300px;
+		left:-800px;
+		-webkit-transform: scaleX(-1);
+		}
+}
+
+
+@-webkit-keyframes tigre{
+    0%{
+		left:30px;
+		}
+    100%{
+		left:-800px;
+		}
+}
+
+	
+/* &&&&&&&&&&&&&&&&&&& PAROES GERAIS &&&&&&&&&&&&&&&&&&&&&&&& */
+
+
+
+
+
+
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& PADROES DE OBJETOS  */
+
+/* PADRAO DA CENA 01 -------------------- */
+
+/* Cortina no inicio para abrir e no final para fechar */
+.cortina-d,
+body.cena9 .cortina-d{
+	background-image:url('img/cortina-d.png');
+	width:640px;
+	height:720px;
+	left:640px;
+	-webkit-transition:3s;
+}
+
+/* Cortina no inicio para abrir e no final para fechar */
+.cortina-e,
+body.cena9 .cortina-e{
+	background-image:url('img/cortina-e.png');
+	width:675px;
+	height:720px;
+	left:0;
+	-webkit-transition:3s;
+}
+
+/* luzes e refletores, posicao antes de animar */
+.luzes{
+	background-image:url('img/luzes.png');
+	width:1280px;
+	height:90px;
+	top:-100px;
+	z-index:1;
+	}
+	
+/* Posicao da placa inicial */
+.placa{
+	background-image:url('img/placa.png');
+	width:810px;
+	height:600px;
+	top:0;
+	left:0;
+	right:0;
+	margin:0 auto;
+}
+
+/* Placa voltando dizendo FIM */
+.fim,
+body.cena9 .fim{
+	background-image:url('img/fim.png');
+	width:810px;
+	height:600px;
+	top:0;
+	left:0;
+	right:0;
+	margin:0 auto;
+	-webkit-transition:3s;
+}
+
+/* Botao iniciar */
+.iniciar{
+	background-image:url('img/iniciar.png');
+	width:200px;
+	height:100px;
+	left:527px;
+	top:600px;
+	}
+
+/* Placa voltando dizendo LEIA NOVAMENTE */	
+.leia,
+body.cena9 .leia{
+	background-image:url('img/leia.png');
+	width:255px;
+	height:200px;
+	top:570px;
+	left:0px;
+	right:0px;
+	margin:0px auto;
+	opcity:1;
+	-webkit-transition:5s 3s;
+	}
+
+/* Posicionando o botao retroceder */
+.voltar{
+	background-image:url('img/voltar.svg');
+	background-size:contain;
+	width:50px;
+	height:50px;
+	left:20px;
+	top:640px;
+	z-index:10;
+}
+
+/* Animacao do botao mudando de img */
+.voltar:hover{
+	background-image:url('img/voltar2.svg');
+	-webkit-transition:1s;
+}
+/* PADRAO DA CENA 01 -------------------- */
+
+
+
+
+
+
+
+
+
+/* PADRAO DA CENA 02 -------------------- */
+
+/* Posicao de bebe mowgli */
+.mowgli-c2{
+	background-image:url('img/baby.png');
+	width:280px;
+	height:580px;
+	top:800px;
+	}
+	
+	
+/* Posicao de baguera a pantera */	
+.baguera-c2{
+	background-image:url('img/baguera-c2.png');
+	width:460px;
+	height:750px;
+	left:160px;
+	top:800px;
+	z-index:5;
+	}
+/* PADRAO DA CENA 02 -------------------- */
+
+
+
+
+
+
+
+
+
+
+/* PADRAO DA CENA 03 -------------------- */
+
+/* Posicao de Baloo */
+.baloo{
+	background-image:url('img/baloo.png');
+	width:315px;
+	height:750px;
+	top:240px;
+	left:-600px;
+	z-index:4;
+	}
+	
+/* Posicao de mowgli quando Jovem */
+.jovem-c3{
+	background-image:url('img/mowgli.png');
+	width:280px;
+	height:580px;
+	top:300px;
+	left:900px;
+	-webkit-transition:3s;
+	z-index:3;
+	}
+/* PADRAO DA CENA 03 -------------------- */
+
+
+
+
+
+
+
+
+
+/* PADRAO DA CENA 04 -------------------- */
+
+/* Posicao da cobra */
+.cobra{
+	background-image:url('img/cobra.png');
+	width:370px;
+	height:750px;
+	top:240px;
+	}
+
+/* Posicao mowgli quando hipinotizado */
+.jovem-doidao{
+	background-image:url('img/mowgli-doidao.png');
+	width:280px;
+	height:580px;
+	top:800px;
+	left:600px;
+	-webkit-transition:3s;
+	}
+/* PADRAO DA CENA 04 -------------------- */
+
+
+
+
+
+
+
+
+
+
+/* PADRAO DA CENA 05 -------------------- */
+.tigre{
+	background-image:url('img/tigre.png');
+	width:540px;
+	height:750px;
+	top:300px;
+	z-index:2;
+	}
+/* PADRAO DA CENA 05 -------------------- */
+
+
+/* PADRAO DA CENA 06 -------------------- */
+.lobo{
+	background-image:url('img/lobo.png');
+	width:540px;
+	height:750px;
+	top:300px;
+	}
+/* PADRAO DA CENA 06 -------------------- */
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& PADROES OBJETOS  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------- TRANSICAO DA CENA 2 */
+
+/* Transicao de cenario */
+body.cena2 .c01{
+	background-image:url('img/cenario01.jpg');
+	top:0;
+	-webkit-transition:5s 3s;
+	}
+	
+/* posicionando as cortinas da DIREITA para a Animacao de abrir e fechar */
+body.cena2 .cortina-d,
+body.cena8 .cortina-d{
+	left:2000px;
+	-webkit-transition:3s;
+}
+
+/* posicionando as cortinas da ESQUERDA para a Animacao de abrir e fechar */
+body.cena2 .cortina-e,
+body.cena8 .cortina-e{
+	left:-2000px;
+	-webkit-transition:3s;
+}
+
+/* Placa inicial subindo */
+body.cena2 .placa{
+	top:-1000px;
+	-webkit-transition:3s;
+}
+
+/* Placa iniciar sumindo e girando */
+body.cena2 .iniciar{
+	opacity:0;
+	-webkit-transition:3s;
+	-webkit-transform: rotate(720deg);
+}
+			
+/* Personagem com transicao iguais em duas cenas */
+body.cena2 .baguera-c2,
+body.cena6 .baguera-c2{
+	top:280px;
+	-webkit-transition:3s;
+}
+
+/* Personagem subindo com transicao */
+body.cena2 .mowgli-c2 {
+	top:450px;
+	left:900px;
+	-webkit-transition:3s;
+	}
+
+/* Animacao no texto, surgindo apos alguns segundos */
+body.cena2 .t1{
+	width:600px;
+	height:160px;
+	left:600px;
+	top:100px;
+	opacity:1;
+	-webkit-transition:3s 6s;
+}
+
+/* --------------------------------------------------------- TRANSICAO DA CENA 2 */
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------- TRANSICAO DA CENA 3 */
+
+/* Cenario trocando */
+body.cena3 .c02{
+	background-image:url('img/cenario02.jpg');
+	top:0;
+	-webkit-transition:5s 3s;
+	}
+	
+/* Personagem em outras duas posicoes iguais em cenas diferentes, com transicao */
+body.cena3 .baguera-c2,
+body.cena8 .baguera-c2{
+	top:280px;
+	left:400px;
+	-webkit-transition:3s;	
+	}
+
+/* Posicao do personagem com transicao */
+body.cena3 .jovem-c3{
+	top:300px;
+	left:900px;
+	-webkit-transition:3s;
+	}
+
+/* Personagem em outras duas posicoes iguais em cenas diferentes, com transicao */
+body.cena3 .baloo,
+body.cena8 .baloo{
+	left:0px;
+	-webkit-transition:3s;
+}	
+
+/* Animacao no texto, surgindo apos alguns segundos */
+body.cena3 .t2{
+	width:420px;
+	height:125px;
+	left:300px;
+	top:100px;
+	opacity:1;
+	-webkit-transition:3s 6s;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------- TRANSICAO DA CENA 3 */
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------- TRANSICAO DA CENA 4 */
+
+/* Cenario trocando */
+body.cena4 .c03{
+	background-image:url('img/cenario03.jpg');
+	top:0;
+	-webkit-transition:5s 3s;
+	}
+	
+/* Posicao de Mowgli hipinotizado */	
+body.cena4 .jovem-doidao{
+	top:300px;
+	-webkit-transition:3s;
+	}
+
+/* Cobra aparecendo com transicao */
+body.cena4 .cobra{
+	left:0px;
+	-webkit-transition:3s;
+}	
+
+/* Caixas de textos nas mesmas posicoes em cenas diferentes */
+body.cena4 .t3,
+body.cena5 .t4,
+body.cena8 .t7{
+	width:300px;
+	height:245px;
+	left:900px;
+	top:100px;
+	opacity:1;
+	-webkit-transition:3s 6s;
+}
+/* -------------------------------------------------------- TRANSICAO DA CENA 4 */
+
+
+
+/* ----------------- TRANSICAO DA CENA 5 */
+
+/* Cenario trocando */
+body.cena5 .c04{
+	background-image:url('img/cenario04.jpg');
+	top:0;
+	-webkit-transition:5s 3s;
+	}
+	
+/* Tigre na sua cena */
+body.cena5 .tigre{
+	left:30px;
+	-webkit-transition:5s;
+	}
+
+/* ----------------- TRANSICAO DA CENA 5 */
+
+
+
+
+
+
+/* ----------------------------------------------------------------- TRANSICAO DA CENA 6 */
+
+/* Caixas de textos nas mesmas posicoes em cenas diferentes */
+body.cena6 .t5,
+body.cena7 .t6{
+	width:700px;
+	height:180px;
+	left:100px;
+	top:100px;
+	opacity:1;
+	-webkit-transition:3s 6s;
+	}
+	
+/* Lobo com transicao */
+body.cena6 .lobo{
+	left:630px;
+	-webkit-transition:3s;
+	}
+	
+/* Cenario trocando */
+body.cena6 .c05{
+	background-image:url('img/cenario05.jpg');
+	top:0;
+	-webkit-transition:5s 3s;
+	}
+/* ----------------------------------------------------------------- TRANSICAO DA CENA 6 */
+
+
+
+
+
+
+/* ------------------- TRANSICAO DA CENA 7 */
+/* Cenario trocando */
+body.cena7 .c06{
+	background-image:url('img/cenario06.jpg');
+	top:0;
+	-webkit-transition:5s 3s;
+	}
+/* Baguera com animacao de passar correndo */
+body.cena7 .baguera-c2{
+	-webkit-animation: luta 2s 20s ease-out backwards;
+	}
+
+/* mowgli na cena 7 */
+body.cena7 .jovem-c3{
+	top:300px;
+	left:500px;
+	-webkit-transition:3s;
+	}
+
+/* BaLoo com animacao de passar correndo */
+body.cena7 .baloo{
+	-webkit-animation: luta 2s 20s ease-out backwards;
+}
+
+/* Tigre com animacao de sair da tela junto com baloo e baguera */
+body.cena7 .tigre{
+	-webkit-animation: tigre 2s 21s forwards;
+	}
+/* ------------------- TRANSICAO DA CENA 7 */
+
+
+
+/* ------------------------------------------------------------- TRANSICAO DA CENA 8 */
+/* Cenario trocando */
+body.cena8 .c07{
+	background-image:url('img/cenario07.jpg');
+	top:0;
+	-webkit-transition:5s 3s;
+	}
+	
+/* ------------------------------------------------------------- TRANSICAO DA CENA 8 */
+
+/* --------------------------------- TRANSICAO DA CENA 9 */
+/* Posicao da placa leia para a animacao */
+body.cena8 .leia{
+	opacity:0;
+	}
+	
+/* Posicao da placa FIM para a animacao */	
+body.cena8 .fim{
+	top:-1000px;
+	}
+
+/* --------------------------------- TRANSICAO DA CENA 9 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* &&&&&&&&&&&&&&&&&&& EXCECOES GERAIS DE CENAS &&&&&&&&&&&&&&&&&&&&&&&& */
+
+/* Onde A img de palco aparecerá */
+body.cena2 #palco,
+body.cena3 #palco,
+body.cena4 #palco,
+body.cena5 #palco,
+body.cena6 #palco,
+body.cena7 #palco,
+body.cena8 #palco,
+body.cena9 #palco{
+	background-image:url('img/palco.jpg');
+	}
+
+
+/* Onde os CENARIOS nao aparecerao */
+body.cena1 .c01,
+body.cena3 .c01,
+body.cena4 .c01,
+body.cena5 .c01,
+body.cena6 .c01,
+body.cena7 .c01,
+body.cena8 .c01,
+body.cena9 .c01,
+
+body.cena1 .c02,
+body.cena2 .c02,
+body.cena4 .c02,
+body.cena5 .c02,
+body.cena6 .c02,
+body.cena7 .c02,
+body.cena8 .c02,
+body.cena9 .c02,
+
+body.cena1 .c03,
+body.cena2 .c03,
+body.cena3 .c03,
+body.cena5 .c03,
+body.cena6 .c03,
+body.cena7 .c03,
+body.cena8 .c03,
+body.cena9 .c03,
+
+body.cena1 .c04,
+body.cena2 .c04,
+body.cena3 .c04,
+body.cena4 .c04,
+body.cena6 .c04,
+body.cena7 .c04,
+body.cena8 .c04,
+body.cena9 .c04,
+
+body.cena1 .c05,
+body.cena2 .c05,
+body.cena3 .c05,
+body.cena4 .c05,
+body.cena5 .c05,
+body.cena7 .c05,
+body.cena8 .c05,
+body.cena9 .c05,
+
+body.cena1 .c06,
+body.cena2 .c06,
+body.cena3 .c06,
+body.cena4 .c06,
+body.cena5 .c06,
+body.cena6 .c06,
+body.cena8 .c06,
+body.cena9 .c06,
+
+body.cena1 .c07,
+body.cena2 .c07,
+body.cena3 .c07,
+body.cena4 .c07,
+body.cena5 .c07,
+body.cena6 .c07,
+body.cena7 .c07,
+body.cena9 .c07{
+	top:-1100px;
+	-webkit-transition:3s;
+	}
+	
+
+
+/* Onde AS LUZES aparecerao */
+body.cena2 .luzes,
+body.cena3 .luzes,
+body.cena4 .luzes,
+body.cena5 .luzes,
+body.cena6 .luzes,
+body.cena7 .luzes,
+body.cena8 .luzes{
+	top:0;
+	-webkit-transition:3s 2s;
+	}
+
+
+/* Onde as Cortinas, as placas de inicio, fim, leia novamente e iniciar nao aparecerao */
+body.cena3 .cortina-d, body.cena3 .cortina-e,
+body.cena4 .cortina-d, body.cena4 .cortina-e,
+body.cena5 .cortina-d, body.cena5 .cortina-e,
+body.cena6 .cortina-d, body.cena6 .cortina-e,
+body.cena7 .cortina-d, body.cena7 .cortina-e,
+
+body.cena3 .placa, body.cena3 .iniciar,
+body.cena4 .placa, body.cena4 .iniciar,
+body.cena5 .placa, body.cena5 .iniciar,
+body.cena6 .placa, body.cena6 .iniciar,
+body.cena7 .placa, body.cena7 .iniciar,
+body.cena8 .placa, body.cena8 .iniciar,
+body.cena9 .placa, body.cena9 .iniciar,
+
+body.cena1 .fim,
+body.cena2 .fim,
+body.cena3 .fim,
+body.cena4 .fim,
+body.cena5 .fim,
+body.cena6 .fim,
+body.cena7 .fim,
+
+body.cena1 .leia,
+body.cena2 .leia,
+body.cena3 .leia,
+body.cena4 .leia,
+body.cena5 .leia,
+body.cena6 .leia,
+body.cena7 .leia{
+	display:none;
+}
+ 
+/* Onde os personagens nao aparecerao */ 	
+body.cena1 .jovem-doidao,
+body.cena2 .jovem-doidao,
+body.cena3 .jovem-doidao,
+body.cena5 .jovem-doidao,
+body.cena6 .jovem-doidao,
+body.cena7 .jovem-doidao,
+body.cena8 .jovem-doidao,
+body.cena9 .jovem-doidao,
+
+body.cena1 .cobra, 
+body.cena2 .cobra, 
+body.cena3 .cobra, 
+body.cena5 .cobra, 
+body.cena6 .cobra, 
+body.cena7 .cobra,
+body.cena8 .cobra,
+body.cena9 .cobra, 
+
+body.cena1 .baloo,
+body.cena2 .baloo,
+body.cena4 .baloo,
+body.cena5 .baloo,
+body.cena6 .baloo,
+body.cena9 .baloo,
+
+body.cena1 .tigre,
+body.cena2 .tigre,
+body.cena3 .tigre,
+body.cena4 .tigre,
+body.cena6 .tigre,
+body.cena8 .tigre,
+body.cena9 .tigre{
+	left:-1000px;
+	opacity:0;
+	-webkit-transition:3s;
+}
+
+
+
+/* Onde os personagens nao aparecerao */ 
+body.cena1 .baguera-c2,
+body.cena4 .baguera-c2,
+body.cena5 .baguera-c2,
+body.cena9 .baguera-c2,
+
+body.cena1 .mowgli-c2,
+body.cena3 .mowgli-c2,
+body.cena4 .mowgli-c2,
+body.cena5 .mowgli-c2,
+body.cena6 .mowgli-c2,
+body.cena7 .mowgli-c2,
+body.cena8 .mowgli-c2,
+body.cena9 .mowgli-c2,
+
+body.cena1 .jovem-c3,
+body.cena2 .jovem-c3,
+body.cena4 .jovem-c3,
+body.cena5 .jovem-c3,
+body.cena6 .jovem-c3,
+body.cena9 .jovem-c3,
+
+body.cena1 .lobo,
+body.cena2 .lobo,
+body.cena3 .lobo,
+body.cena4 .lobo,
+body.cena5 .lobo,
+body.cena7 .lobo,
+body.cena8 .lobo,
+body.cena9 .lobo{
+	left:2000px;
+	opacity:0;
+	-webkit-transition:3s;
+}
+
+/* Onde o botao de voltar nao aparecera */ 
+body.cena1 .voltar,
+body.cena9 .voltar{
+	display:none;
+}
+	
+/* &&&&&&&&&&&&&&&&&&& EXCECOES GERAIS DE CENAS &&&&&&&&&&&&&&&&&&&&&&&& */
