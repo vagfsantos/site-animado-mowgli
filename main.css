@@ -121,7 +121,7 @@ body.cena8 .personagem{
 /* Cortina no inicio para abrir e no final para fechar */
 .cortina-d,
 body.cena9 .cortina-d{
-	background-image:url('img/cortina-d.png');
+	background-image:url('img/cortina-d.jpg');
 	width:640px;
 	height:720px;
 	left:640px;
@@ -131,7 +131,7 @@ body.cena9 .cortina-d{
 /* Cortina no inicio para abrir e no final para fechar */
 .cortina-e,
 body.cena9 .cortina-e{
-	background-image:url('img/cortina-e.png');
+	background-image:url('img/cortina-e.jpg');
 	width:675px;
 	height:720px;
 	left:0;
